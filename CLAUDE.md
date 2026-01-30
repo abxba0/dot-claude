@@ -4,6 +4,20 @@ This file is loaded automatically by Claude Code at the start of every session. 
 
 ---
 
+## Project
+
+<!-- Run `/init` in Claude Code to auto-populate this section with your codebase details. -->
+<!-- It will detect your tech stack, build commands, test runners, and project structure. -->
+<!-- Replace the example below with the actual output. -->
+
+- **Stack**: <!-- e.g. TypeScript, Next.js, PostgreSQL -->
+- **Build**: <!-- e.g. `npm run build` -->
+- **Test**: <!-- e.g. `npm test` or `pytest` -->
+- **Lint**: <!-- e.g. `npm run lint` -->
+- **Structure**: <!-- e.g. `src/` for app code, `tests/` for tests -->
+
+---
+
 ## Coding Guidelines
 
 **Tradeoff:** These guidelines bias toward caution over speed. For trivial tasks, use judgment.
