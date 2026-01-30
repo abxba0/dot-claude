@@ -63,6 +63,43 @@ For multi-step tasks, state a brief plan:
 
 ---
 
+## Verification Workflow
+
+**Always give Claude a way to verify its own work. This is the single highest-leverage practice.**
+
+- Run tests after every change. Prefer running single relevant tests over the full suite.
+- For bug fixes, write a failing test that reproduces the issue first, then fix it.
+- For UI changes, take a screenshot and compare to the original. List differences and fix them.
+- Address root causes, not symptoms — don't suppress errors to make builds pass.
+- If you can't verify it, don't ship it.
+
+---
+
+## Development Workflow (Explore → Plan → Code → Commit)
+
+**Separate research and planning from implementation to avoid solving the wrong problem.**
+
+1. **Explore**: Read relevant code first. Use Plan Mode (Shift+Tab) to investigate without making changes.
+2. **Plan**: Create a concrete implementation plan. Identify files to change, edge cases, and risks.
+3. **Implement**: Write code with tests, verifying against the plan at each step.
+4. **Commit**: Descriptive commit message and PR.
+
+Skip planning for trivial tasks where the scope is obvious and the diff fits in one sentence.
+
+---
+
+## Context Management
+
+**Context is the most important resource to manage. Performance degrades as it fills.**
+
+- Use `/clear` between unrelated tasks — don't let old context pollute new work.
+- After 2 failed corrections, `/clear` and write a better prompt incorporating what you learned.
+- Scope investigations narrowly. Use subagents for research-heavy exploration to keep the main context clean.
+- Use `/compact` when context is getting heavy. Add focus instructions: `/compact Focus on the API changes`.
+- Don't let a session become a kitchen sink — one task per session when possible.
+
+---
+
 ## Preferred Command-Line Tools
 
 This machine has modern alternatives to traditional Unix tools installed. ALWAYS prefer using them over the traditional ones unless there's a strong reason not to.
