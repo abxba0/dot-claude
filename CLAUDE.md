@@ -1,40 +1,10 @@
 # CLAUDE.md
 
-This file is loaded automatically by Claude Code at the start of every session. It contains coding guidelines, tool preferences, and setup instructions.
-
-## Setup
-
-### Install everything-claude-code plugin
-
-This repo includes [everything-claude-code](https://github.com/affaan-m/everything-claude-code) as a submodule — a battle-tested collection of agents, skills, hooks, commands, rules, and MCP configs for Claude Code.
-
-**Option A: Plugin install (recommended)**
-
-```
-/plugin marketplace add affaan-m/everything-claude-code
-/plugin install everything-claude-code@everything-claude-code
-```
-
-**Option B: Manual install**
-
-```bash
-cp everything-claude-code/agents/*.md ~/.claude/agents/
-cp everything-claude-code/rules/*.md ~/.claude/rules/
-cp everything-claude-code/commands/*.md ~/.claude/commands/
-cp -r everything-claude-code/skills/* ~/.claude/skills/
-```
-
-Rules must be copied manually regardless of install method:
-
-```bash
-cp -r everything-claude-code/rules/* ~/.claude/rules/
-```
+This file is loaded automatically by Claude Code at the start of every session. It contains coding guidelines and tool preferences.
 
 ---
 
-## Coding Guidelines (Karpathy)
-
-Behavioral guidelines to reduce common LLM coding mistakes, derived from [Andrej Karpathy's observations](https://x.com/karpathy/status/2015883857489522876).
+## Coding Guidelines
 
 **Tradeoff:** These guidelines bias toward caution over speed. For trivial tasks, use judgment.
 
